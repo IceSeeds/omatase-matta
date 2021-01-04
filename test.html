@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>非公式ファンサイト</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style media="screen">
+    .swiper-container {
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Slider全体のコンテナ -->
+  <div class="swiper-container">
+      <!-- Sliderの内包コンテナ -->
+      <div class="swiper-wrapper">
+          <!-- Slideさせたいコンテンツ -->
+          <div class="swiper-slide">
+            <a href="">
+              <img src="img/img03.jpg" alt="ss">
+            </a>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- ページネーション（※省略可） -->
+      <div class="swiper-pagination"></div>
+      <!-- ナビゲーションボタン（※省略可） -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- スクロールバー（※省略可） -->
+      <div class="swiper-scrollbar"></div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>
