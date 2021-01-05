@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(200, 60, 53, 0.95);
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* header
+---------------------------------------------*/
+
+.header-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /*  background: #4613a5;*/
+  height: 500px;
+}
+
+.title {
+  width: 50%;
+
+}
+
+h1 {
+  text-shadow: 1px 1px 2px silver;
+  font-size: 4rem;
+  text-align: left;
+  width: 50%;
+  /*  float: rght;*/
+}
+
+
+.top-img {
+  width: 50%;
+  /*  background: #ccc;*/
+}
+
+.top-img img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* use
+---------------------------------------------*/
+.use {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.swiper-container {
+  height: 250px;
+  width: auto;
+}
+
+/* info
+---------------------------------------------*/
+.info {
+  /*  background: pink;*/
+  margin: 0 10%;
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.info-text {
+  background: tomato;
+}
+
+.info-img {
+  width: 45%;
+  height: auto;
+}
+
+.info-text {
+  letter-spacing: 2px;
+}
+
+
+
+
+/* footer
+---------------------------------------------*/
+.footer {
+  background-color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding-bottom: 20%;
+}
+
+footer h2 {
+  color: #000;
+  margin-bottom: 3em;
+  padding-top
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* icons
+---------------------------------------------*/
+.icons {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 5%;
+}
