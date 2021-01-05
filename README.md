@@ -1,4 +1,4 @@
 # omatase-matta
 omatase-matta
 
-Subtena retejo VTuber
+Support website VTuber
