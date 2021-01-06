@@ -22,7 +22,7 @@ def all_view():
         print( row )
 
     close( con )
-#all_view()
+all_view()
 
 def add_search( data ):
     con, cur = connect()
