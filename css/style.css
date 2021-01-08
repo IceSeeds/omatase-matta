@@ -31,6 +31,7 @@ header,section.info {
 ---------------------------------------------*/
 header {
   margin: 0 auto;
+  margin: 0 10%;
 }
 
 .header-box {
@@ -53,7 +54,8 @@ h1 {
 
 
 .top-img {
-  width: 50%;
+  width: 100%;
+  height: auto;
   /*  background: #ccc;*/
 }
 
@@ -76,6 +78,7 @@ section {
 .use {
   color: #333;
   background-color: rgba(255, 255, 255, 0.95);
+  height: 350px;
 }
 
 .use a {
@@ -128,6 +131,15 @@ section {
   
 }
 
+
+
+
+.three-point {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
 
 
 /* info
