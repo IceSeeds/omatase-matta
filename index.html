@@ -36,52 +36,46 @@
     <section class="use">
       <!-- js 2 php for echo swiper -->
       <!-- Slider全体のコンテナ -->
-      <div class="swiper-container">
-        <!-- Sliderの内包コンテナ -->
-        <div class="swiper-wrapper">
-          <!-- Slideさせたいコンテンツ -->
+      <div class="swiper-container"><!-- Sliderの内包コンテナ -->
+        <div class="swiper-wrapper"><!-- Slideさせたいコンテンツ -->
+
           <div class="swiper-slide">
-            <a href="">
-              <div class="slide-info">
+            <div class="slide-info">
+              <p class="slide-img">
                 <img src="images/test/img01.png" width="500" height="250" alt="ss">
-                <div class="slide-text">
-                  <table border="1">
-                   <tr>
-                     <th>名前</th>
-                     <th>年齢</th>
-                   </tr>
-                   <tr>
-                     <td>田中</td>
-                     <td>27</td>
-                   </tr>
-                   <tr>
-                     <td>佐藤</td>
-                     <td>42</td>
-                   </tr>
-                 </table>
-                </div>
+              </p>
+              <div class="slide-text">
+                <ul>
+                  <li class="slide-title">「jkふぇｓｋ」jkふぇｓｋｊｄkfじぇしｊｄ</li>
+                  <li>概要テキスト概要テキスト概要テキスト概要テキスト要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テキスト概要要テ</li>
+                  <div class="slide-number">
+                    <li class="left">166.000回視聴</li>
+                    <li class="right"><i class="fas fa-thumbs-up"></i>50</li>
+                  </div>
+                  <li>2020/01/01 20:90</li>
+                </ul>
               </div>
-            </a>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <a href="">
+          <div class="swiper-slide" style="background:#474eff">
               <div class="slide-info">
                 <img src="images/test/img02.png" width="500" height="250" alt="ss">
                 <div class="slide-text">
+                  テキスト
                 </div>
               </div>
-            </a>
           </div>
-          <div class="swiper-slide">
-            <a href="">
+          <div class="swiper-slide" style="background:#47ffcd">
               <div class="slide-info">
                 <img src="images/test/img03.png" width="500" height="250" alt="ss">
                 <div class="slide-text">
+                  テキスト
                 </div>
               </div>
-            </a>
           </div>
         </div>
+
+
         <!-- ページネーション（※省略可） -->
         <div class="swiper-pagination"></div>
         <!-- ナビゲーションボタン（※省略可） -->
@@ -97,21 +91,19 @@
       <h2>アンジュ・カトリーナ って誰？</h2>
       <div class="flex">
         <p class="info-left">
-          <img class="info-img" src="images/anju.png" alt="アンジュ画像">
+          <img src="images/anju.png" width="500" height="1399" alt="アンジュ画像">
         </p>
         <div class="info-right">
-          <p>サブタイトルテキスト</p>
-          <div class="info-text">
-            <div class="text">
-              <p>ボロボロの小屋で時間を忘れて錬金術の研究に明け暮れている</p>
-              <p>大人っぽい女性的な体に憧れており、実はその研究をしているとかしていないとか</p>
-              <p>中性的な容姿とハスキーボイスが特徴的な美少女錬金術師</p>
-              <p>頑なに「かわいい」「天才」を自称する</p>
-              <p>アダルトコンテンツに詳しく度々エロに対する独特な価値観を力説する</p>
-              <p>親しいライバーたちを巻き込んで茶番劇を繰り広げるなどエキセントリックな部分が目立つが基本的にはおおらかで気配りのできる人物</p>
-              <p>嘘を信じ込みやすいピュアな一面も</p>
-            </div>
-          </div>
+  <!--          <div class="info-text">-->
+            <p class="info-title">サブタイトルテキスト</p>
+            <p>ボロボロの小屋で時間を忘れて錬金術の研究に明け暮れている</p>
+            <p>大人っぽい女性的な体に憧れており、実はその研究をしているとかしていないとか</p>
+            <p>中性的な容姿とハスキーボイスが特徴的な美少女錬金術師</p>
+            <p>頑なに「かわいい」「天才」を自称する</p>
+            <p>アダルトコンテンツに詳しく度々エロに対する独特な価値観を力説する</p>
+            <p>親しいライバーたちを巻き込んで茶番劇を繰り広げるなどエキセントリックな部分が目立つが基本的にはおおらかで気配りのできる人物</p>
+            <p>嘘を信じ込みやすいピュアな一面も</p>
+  <!--          </div>-->
         </div>
         <!--/info-right-->
       </div>
@@ -145,13 +137,18 @@
       </p>
     </div>
 
-    <footer class="footer">
-      <h2>お問い合わせ</h2>
+    <footer>
       <button type="button" class="btn btn-outline-danger btn-lg">
         <i class="fab fa-twitter fa-2x"></i>
         <a href="https://twitter.com/messages/compose?recipient_id=1192296003161882624">Twitterで問い合わせる</a>
         <i class="fab fa-twitter fa-2x"></i>
       </button>
+        <ul class="footer-nav">
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">このサイトについて</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      <small>&copy;2020 椎名あいす.</small>
     </footer>
 
 
