@@ -16,13 +16,14 @@ $(function(){
       }
     }).done(function( response ){
       // 成功時の動作を記述
-      var jsonData = JSON.stringify(response, null, "\t");
+      //var jsonData = JSON.stringify(response, null, "\t");
       //console.log( jsonData )
       var viewCount   = response['items'][0]['statistics']['viewCount'];
       var likeCount   = response['items'][0]['statistics']['likeCount'];
       var description = response['items'][0]['snippet']['description'];
+      var thumbnails  = response['items'][0]['snippet']['thumbnails']['maxres']['url'];
 
-      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + data_array[3] + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li id="slide-des" class="three-point">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
+      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li id="slide-des">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
 
       $('#slide-list').append( $(html_data) );
       mySwiper.update();
@@ -50,7 +51,7 @@ $(function(){
 		}
 	}).done(function(response){
 		//var jsonData = JSON.stringify(response, null, "\t"); // json表示用 json pars
-    console.log( "ok" )
+    //console.log( "ok" + jsonData )
     num = response.items.length;
     for( var i = 0; i < num ; i++ )
     {
@@ -60,9 +61,9 @@ $(function(){
       var publishedAt    = response.items[i].snippet.publishedAt;
       var title          = response.items[i].snippet.title;
       //var description    = response.items[i].snippet.description; // videosの方で取得 ( 文字数制限があるため )
-      var thumbnails_url = response.items[i].snippet.thumbnails.high.url;
-      //console.log( target_id )
-      data_array.push( target_id, publishedAt, title, thumbnails_url );
+      //var thumbnails_url = response.items[i].snippet.thumbnails.maxres.url;
+      //console.log( thumbnails_url )
+      data_array.push( target_id, publishedAt, title );
       //console.log( data_array );
 /*
       // TODO idが複数存在するため、別の方法を試すなう。
