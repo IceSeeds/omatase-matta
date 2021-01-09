@@ -38,25 +38,29 @@ header {
   display: flex;
   align-items: center;
   height: 500px;
+  margin-top: 5%;
 }
 
 .title {
-  width: 50%;
-
+  width: 60%;
+  margin-right: 5%;
 }
 
 h1 {
   text-shadow: 1px 1px 2px silver;
   font-size: 4rem;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
+.title p {
+  margin-top: 10%;
+}
 
 .top-img {
-  width: 100%;
-  height: auto;
-  /*  background: #ccc;*/
+  width: auto;
+  height: 100%;
+  display: flex;
 }
 
 .top-img img {
@@ -78,17 +82,12 @@ section {
 .use {
   color: #333;
   background-color: rgba(255, 255, 255, 0.95);
-  height: 350px;
+  height: 250px;
 }
 
 .use a {
   color: #333;
   text-decoration: none;
-}
-
-
-.swiper-slide {
-  padding: 2%;
 }
 
 .slide-info {
@@ -97,18 +96,21 @@ section {
 
 .slide-img {
   width: 50%;
-  margin-right: 3%;
+  height: 250px;
+  text-align: center;
 }
 
 .slide-img img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   vertical-align: bottom;
+  padding: 3% 0 3% 3%;
 }
 
 .slide-text {
   width: 50%;
   font-size: 0.87em;
+  padding: 1.5% 5% 1.5% 1.5%;
 }
 
 .slide-text ul {
@@ -131,15 +133,18 @@ section {
   
 }
 
-
-
-
 .three-point {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
   }
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+}
 
 
 /* info
@@ -216,7 +221,7 @@ button {
   display: flex;
 /*  background: pink;*/
   height: 30px;
-  width: 60%;
+  width: 50%;
   margin: 3% auto;
 }
 
@@ -228,11 +233,21 @@ button {
 .footer-nav li a {
   display: block;
   line-height: 30px;
+/*  background: tomato;*/
+}
+
+.footer-nav li:not(:last-of-type) {
+  border-right: 1px solid #000;
+  padding: 0 3%;
 }
 
 footer a {
   color: #333;
   text-decoration: none;
+}
+
+footer a:hover {
+  cursor: pointer;
 }
 
 footer small {

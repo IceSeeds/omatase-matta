@@ -23,7 +23,7 @@ $(function(){
       var description = response['items'][0]['snippet']['description'];
       var thumbnails  = response['items'][0]['snippet']['thumbnails']['maxres']['url'];
 
-      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li id="slide-des">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
+      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li id="slide-des" class="three-point">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
 
       $('#slide-list').append( $(html_data) );
       mySwiper.update();
