@@ -1,3 +1,60 @@
+
+/*//              基本
+//--------------------------------
+var mySwiper = new Swiper('.swiper-container', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	}
+});
+*/
+
+
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    centeredSlides : true,  //アクティブなスライドを中央に表示
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    grabCursor: true,
+    parallax: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      1023: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      }
+    },
+    // Events
+    on: {
+      imagesReady: function(){
+        this.el.classList.remove('loading');
+      }
+    }
+});
+mySwiper.init;
+
+/*
+// 複数個でも同じ動きでいいなら、ユニークはイラナイ。
+var mySwiper2 = new Swiper('.swiper-container2', {
+    pagination: {
+      el: '.swiper-pagination2',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+});
+mySwiper2.init();
+*/
+
+/*           next shadows
+//------------------------------------
 // Params
 var sliderSelector = '.swiper-container',
     options = {
@@ -39,23 +96,6 @@ var sliderSelector = '.swiper-container',
       }
     };
 var mySwiper = new Swiper(sliderSelector, options);
-
 // Initialize slider
 mySwiper.init();
-
-/* old
-var mySwiper = new Swiper ('.swiper-container', {
-  // ここからオプション
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-})
 */

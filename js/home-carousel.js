@@ -11,8 +11,7 @@ $(function(){
       data: {
         part: 'snippet, statistics',
         id: data_array[0],
-        //使用するAPIキー
-        key: 'AIzaSyDb_gBbucdoCC4PgGzZc4pEYY-VDOekJdI'
+        key: 'AIzaSyC6xWnSziX7JmvW2i85KwK54MwGPPNyZsw'
       }
     }).done(function( response ){
       // 成功時の動作を記述
@@ -23,10 +22,31 @@ $(function(){
       var description = response['items'][0]['snippet']['description'];
       var thumbnails  = response['items'][0]['snippet']['thumbnails']['maxres']['url'];
 
-      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li id="slide-des" class="three-point">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
+      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li class="three-point">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
 
-      $('#slide-list').append( $(html_data) );
-      mySwiper.update();
+      $( '#slide-list' ).append( html_data );
+      //mySwiper.update;
+      /*
+        <div class="swiper-slide">
+          <div class="slide-info">
+            <p class="slide-img">
+              <img src="' + thumbnails + '" width="500" height="250" alt="ss">
+            </p>
+            <div class="slide-text">
+              <ul>
+                <li class="slide-title">' + data_array[2] + '</li>
+                <li class="three-point">' + description + '</li>
+                <div class="slide-number">
+                  <li class="left">' + viewCount + ' 回視聴</li>
+                  <li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li>
+                </div>
+                <li>' + data_array[1] + '</li>
+              </ul>
+            </div>
+          </div>
+        </div>';
+      */
+
     }).fail(function() {
       // 失敗時の動作を記述
       $('#hoge').text('失敗しました');
@@ -47,7 +67,7 @@ $(function(){
       maxResults: 5,
       order: 'date',
 			//使用するAPIキー
-			key: 'AIzaSyDb_gBbucdoCC4PgGzZc4pEYY-VDOekJdI'
+			key: 'AIzaSyC6xWnSziX7JmvW2i85KwK54MwGPPNyZsw'
 		}
 	}).done(function(response){
 		//var jsonData = JSON.stringify(response, null, "\t"); // json表示用 json pars

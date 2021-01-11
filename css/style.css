@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
 }
 
-/* 共通
+/* å…±é€š
 ---------------------------------------------*/
 header,section.info {
   max-width: 1200px;
@@ -130,7 +130,7 @@ section {
 .slide-title {
   font-size: 1.3em;
   font-weight: bold;
-  
+
 }
 
 .three-point {
@@ -196,12 +196,14 @@ h2 {
   margin-bottom: 10%;
 }
 
-
-
-
-
-
-
+/* swiper コレがナイト左寄りになる。。。*/
+.swiper-pagination2 {
+  text-align: center;
+}
+.swiper-container2 {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 
 /* footer
