@@ -133,13 +133,6 @@ section {
     overflow: hidden;
   }
 
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-}
-
-
 /* info
 ---------------------------------------------*/
 .info {
@@ -196,6 +189,9 @@ h2 {
 /* swiper コレがナイト左寄りになる。。。*/
 .swiper-pagination2 {
   text-align: center;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
 }
 .swiper-container2 {
   overflow-x: hidden;
