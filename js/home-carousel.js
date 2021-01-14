@@ -24,28 +24,10 @@ $(function(){
 
       var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + data_array[2] + '</li><li class="three-point">' + description + '</li><div class="slide-number"><li class="left">' + viewCount + ' 回視聴</li><li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li></div><li>' + data_array[1] + '</li></ul></div></div></div>';
 
-      $( '#slide-list' ).append( html_data );
-      //mySwiper.update;
-      /*
-        <div class="swiper-slide">
-          <div class="slide-info">
-            <p class="slide-img">
-              <img src="' + thumbnails + '" width="500" height="250" alt="ss">
-            </p>
-            <div class="slide-text">
-              <ul>
-                <li class="slide-title">' + data_array[2] + '</li>
-                <li class="three-point">' + description + '</li>
-                <div class="slide-number">
-                  <li class="left">' + viewCount + ' 回視聴</li>
-                  <li class="right"><i class="fas fa-thumbs-up">' + likeCount + '</i></li>
-                </div>
-                <li>' + data_array[1] + '</li>
-              </ul>
-            </div>
-          </div>
-        </div>';
-      */
+      $( '#slide-list' ).append( $( html_data ) );
+
+      var mySwiper = document.querySelector('.swiper-container').swiper;
+      mySwiper.update();
 
     }).fail(function() {
       // 失敗時の動作を記述
@@ -80,18 +62,8 @@ $(function(){
       var target_id      = response.items[i].id.videoId;
       var publishedAt    = response.items[i].snippet.publishedAt;
       var title          = response.items[i].snippet.title;
-      //var description    = response.items[i].snippet.description; // videosの方で取得 ( 文字数制限があるため )
-      //var thumbnails_url = response.items[i].snippet.thumbnails.maxres.url;
-      //console.log( thumbnails_url )
+      
       data_array.push( target_id, publishedAt, title );
-      //console.log( data_array );
-/*
-      // TODO idが複数存在するため、別の方法を試すなう。
-      //      連想配列を使うか、普通の配列を使うか。。。迷う
-      var html_data = '<div class="swiper-slide"><div class="slide-info"><p class="slide-img"><img src="' + thumbnails_url + '" width="500" height="250" alt="ss"></p><div class="slide-text"><ul><li class="slide-title">' + title + '</li><li id="slide-des">' + description + '</li><div class="slide-number"><li class="left">none回視聴</li><li class="right"><i class="fas fa-thumbs-up">none</i></li></div><li>' + publishedAt + '</li></ul></div></div></div>';
-
-      $('#slide-list').append( $(html_data) );
-*/
       video_search( data_array );
     }
 	}).fail(function() {
