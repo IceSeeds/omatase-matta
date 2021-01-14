@@ -19,11 +19,8 @@ var mySwiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    
-    loop: true,
-    autoplay: {
-      delay: 3000, //3秒後に次の画像に代わる
-    }
+
+    loop: true
 });
 //mySwiper.init;
 
