@@ -3,16 +3,11 @@ import os
 import re
 import sys
 import json
-import shutil
-import pickle
 import time
 
 import requests
 from retry import retry
 from bs4 import BeautifulSoup
-import numpy as np
-import matplotlib.pyplot as plt
-from PIL import Image
 
 class ContinuationURLNotFound(Exception):
    pass
@@ -179,10 +174,9 @@ def get_chat_replay_data(video_id):
    return( result )
 
 def count_result( target_url ):
-        youtube_select_url = 'https://www.youtube.com/watch?v=' + target_url + "&feature=youtu.be&t="
-        res_comment = get_chat_replay_data( target_url )
+    youtube_select_url = 'https://www.youtube.com/watch?v=' + target_url + "&feature=youtu.be&t="
+    res_comment = get_chat_replay_data( target_url )
 
-        print( res_comment )
+    return res_comment
 
-
-count_result( 'tmlGY5rNQes' )
+#count_result( 'vkyewl6y0eU' )
