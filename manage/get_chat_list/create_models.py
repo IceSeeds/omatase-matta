@@ -39,9 +39,11 @@ def main( target_url, mode = 'r' ):
 if __name__ == '__main__':
     target_url = 'M8yLREU8YrA'
 
+    #モデルの作成
     #main( target_url, mode = 'w' )
 
-    w2v_model = main( target_url )
+    #モデルの読み込み
+    #w2v_model = main( target_url )
     #print( w2v_model.wv.vocab.keys() )
     #print( w2v_model.wv.most_similar( positive = [""], topn = 1 ) )
 
